@@ -6,12 +6,14 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h1>I miei Film</h1>
-                    <p>
-                        @dump($movie)
-                    </p>
-                </div>
+                @foreach ($movies as $movie)
+                    <div class="col-3 mb-5">
+                        <h3>{{$movie->title}}</h3>
+                        <h3>{{$movie->original_title}}</h3>
+                        <h4>{{$movie->date}}</h4>
+                        <h5>{{$movie->vote}}</h5>
+                    </div>
+                @endforeach 
             </div>
         </div>
     </main>
